@@ -1,0 +1,43 @@
+<head>
+  <title>21</title>
+</head>
+
+<body>
+  <h1>21</h1>
+  	{{> app}}
+  	
+</body>
+
+<template name="app">
+{{#if login}}
+  		Введите логин и начните игру
+{{> loginForm}}
+  		
+{{/if}}
+	{{#if wait}}
+		Ожидание второго игрока...
+	{{/if}}
+
+	{{#if game}}
+		{{> gameForm}}	
+	{{/if}}
+
+  {{#if endGame}}
+    {{> endGameTemplate}}
+  {{/if}}
+</template>
+
+<template name="loginForm">
+  <form>
+  	<input type="text" name="playerLogin">
+  	<input type="submit" value="Login and start game">
+  </form>
+</template>
+
+
+<template name="endGameTemplate">
+  Победитель: {{winner}}
+  <form>
+    <button type="button" id="newGame"> Новая игра </button>
+  </form>
+</template>

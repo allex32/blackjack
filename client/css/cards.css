@@ -1,0 +1,19 @@
+.area {
+  padding:20px;
+  background-color: green;
+}
+
+#play_area {
+  position: relative;
+  height: 300px;
+  width: 700px;
+}
+
+.card{
+	width: 70px;
+	float: left;
+}
+.cardimg {
+	height: 100px;
+	width: 70px;
+}

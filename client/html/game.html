@@ -1,0 +1,25 @@
+<template name="gameForm">
+	{{> play_tmpl}}
+	 {{#if turn}}
+      {{> buttons}}
+   {{else}}
+     Очередь другого игрока. Ждите
+   {{/if}}
+</template>
+
+<template name="play_tmpl">
+  		<div id="play_area" class="area">
+    		{{#each cards}}
+     			 <div class="card {{selected}}" draggable="true">
+        			<img class="cardimg" src="cards/{{value}}_{{color}}.png" >
+      			</div>
+    		{{/each}}
+  		</div>
+</template>
+
+<template name="buttons">
+  <form>
+    <button type="button" id="getCard"> Взять карту </button>
+    <button type="button" id="endTurn"> Окончить ход </button>
+  </form>
+</template>
