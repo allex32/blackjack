@@ -15,5 +15,5 @@ Player.prototype.initNewPlayer = function(){
 		}
 		else
 			return ['wait',ID_GAME];
-	}
+}
 
